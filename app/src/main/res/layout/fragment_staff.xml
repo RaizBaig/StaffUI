@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.staff.stafflist.StaffFragment"
+    android:background="@color/gray">
+    <include
+        layout="@layout/staff_toolbar"
+        android:id="@+id/tool_bar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter_rv"
+        android:layout_below="@+id/tool_bar"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/staff_rv"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@+id/filter_rv"
+        android:layout_marginTop="10dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_staff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#00000000"
+        android:layout_margin="20dp"
+        android:src="@drawable/add_ic"
+        android:contentDescription="@string/add_button" />
+</RelativeLayout>
